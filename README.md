@@ -1,6 +1,8 @@
 stranger
 ========
 
+[![Build Status](https://travis-ci.org/datuhealth/stranger.svg?branch=master)](https://travis-ci.org/datuhealth/stranger)
+
 stranger is a visual testing framework to catch and report changes to the rendered layout of your pages. It runs with node.js and selenium.
 
 Inspired by [@jessicard](https://twitter.com/jessicard)'s RailsConf [talk](http://confreaks.tv/videos/railsconf2015-implementing-a-visual-css-testing-framework) on implementing a CSS testing framework, this is a somewhat similar solution but for node. You can run stranger to compare the current state of your site against a previously generated set of images. It uses configuration files, so you can run tests on different screen sizes, different browsers, different urls, etc.
