@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta chartset="utf8">
+  <meta name="viewport" content="initial-scale=1;user-scaleable=no">
+  <title>Dynamic text</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    p {
+      text-align: centered;
+    }
+  </style>
+</head>
+<body>
+  <h1>There should be some dynamic text below</h1>
+  <script>
+    var el = document.createElement('p')
+
+    el.textContent = 'This is the dynamically generated text'
+
+    document.body.appendChild(el)
+  </script>
+</body>
+</html>

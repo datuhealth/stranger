@@ -1,0 +1,17 @@
+{
+  "baseDir": "./test/img/desktop/master",
+  "compareDir": "./test/img/desktop/branch",
+  "diffDir": "./test/img/desktop/diff",
+  "browser": "firefox",
+  "tests": [
+    {
+      "url": "./test/lib/centered.html",
+      "local": true,
+      "name": "Home"
+    },
+    {
+      "url": "./test/lib/dynamic.html",
+      "local": true
+    }
+  ]
+}

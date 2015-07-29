@@ -1,0 +1,11 @@
+
+Usage: stranger {OPTIONS}
+
+Options:
+
+  --config, -c  The configuration file to use.
+                For an example config, type `stranger --help config`
+
+--generate, -g  Whether to generate the base files or not.
+
+    --help, -h  Show this message

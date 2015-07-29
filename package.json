@@ -1,0 +1,39 @@
+{
+  "name": "stranger",
+  "version": "1.0.0",
+  "description": "A visual regression testing framework for node.js",
+  "main": "sranger.js",
+  "bin": {
+    "stranger": "./bin/cmd.js"
+  },
+  "preferGlobal": true,
+  "scripts": {
+    "test": "standard;node test/index.js | tap-spec"
+  },
+  "keywords": [
+    "visual",
+    "regression",
+    "visual regression",
+    "ui testing",
+    "testing",
+    "ui"
+  ],
+  "author": "Mike Engel",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "chalk": "^1.1.0",
+    "del": "^1.2.0",
+    "gm": "^1.18.1",
+    "mkdirp": "^0.5.1",
+    "selenium-webdriver": "^2.46.1",
+    "subarg": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "buffered-spawn": "^1.1.2",
+    "pre-commit": "^1.0.10",
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0",
+    "tape-run": "^1.0.0"
+  }
+}

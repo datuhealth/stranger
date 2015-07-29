@@ -1,0 +1,39 @@
+
+Configuration options:
+
+              baseDir: string  The path for the base images to be placed
+
+           compareDir: string  The path for the comparison images to be placed
+
+              diffDir: string  The path for any diff images to be placed
+
+            [browser]: string  The browser to test with. Can be firefox,
+                               chrome, ie, safari or opera. Defaults to firefox
+
+     [browserOptions]: object  The options to configure the browser window
+
+ browserOptions.width: number  The width of the browser. Defaults to 1024
+
+browserOptions.height: number  The height of the browser. Defaults to 1024
+
+      [chromeOptions]: object  The chrome options for selenium.
+                               See: https://goo.gl/ZoCztN
+
+     [firefoxOptions]: object  The firefox options for selenium.
+                               See: https://goo.gl/74oFrD
+
+          [ieOptions]: object  The ie options for selenium
+                               See: https://goo.gl/3zmhPW
+
+       [operaOptions]: object  The opera options for selenium
+                               See: https://goo.gl/QKQHx5
+
+      [safariOptions]: object  The safari options for selenium
+                               See: https://goo.gl/DRK1oz
+
+                tests: array   The test objects that stranger will
+                               test against
+
+             test.url: string  The url to point the browser to
+
+          [test.name]: string  The filename to use for the screenshot. Optional
