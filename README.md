@@ -170,5 +170,3 @@ When making contributions, add passing tests along with your PR.
 * Add multiple support for browsers within the same execution (can be done with multiple configs)
 * Add multiple sizes support for browsers to test against
 * Add support to define a prep function to run before it takes the screenshot (click a button, fill in a form, etc)
-* Project website
-* Remake .git and push to github.com
