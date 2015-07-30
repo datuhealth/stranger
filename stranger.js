@@ -1,7 +1,6 @@
 var fs = require('fs')
 var path = require('path')
 var mkdirp = require('mkdirp')
-var chalk = require('chalk')
 var del = require('del')
 var gm = require('gm')
 var webdriver = require('selenium-webdriver')
@@ -21,7 +20,7 @@ function Stranger (options, generate, callback) {
   var self = this
 
   if (!options) {
-    throw new Error(chalk.red('You need to pass a configuration object'))
+    throw new Error('You need to pass a configuration object')
   }
 
   if (!(self instanceof Stranger)) {
@@ -54,15 +53,11 @@ function Stranger (options, generate, callback) {
 
     // Report the number of images generated if the generate flag was used
     if (self.generateImages) {
-      if (self.callback) {
-        self.callback({
-          imagesProcessed: 0,
-          imagesGenerated: self.config.tests.length,
-          imagesDir: self.config.baseDir
-        })
-      } else {
-        console.log('\n' + chalk.green(self.config.tests.length + ' ' + (self.config.tests.length === 1 ? 'screenshot' : 'screenshots') + ' created and placed in ' + (self.generateImages ? self.config.baseDir : self.config.compareDir)))
-      }
+      self.callback({
+        imagesProcessed: 0,
+        imagesGenerated: self.config.tests.length,
+        imagesDir: self.config.baseDir
+      })
     }
 
     // Otherwise, compare the images
@@ -119,7 +114,7 @@ Stranger.prototype.setupSystem = function () {
   // Check if master images have been generated and error if none have been created
   // TODO - Think about just running generate quickly then continuing instead of erroring
   if (!self.checkForFiles(self.config.baseDir) && !self.generateImages) {
-    throw new Error('\n' + chalk.red('× You don\'t have any reference images created yet.') + '\n' + 'Rerun stranger with the ' + chalk.yellow('--generate') + ' flag')
+    throw new Error('\n× You don\'t have any reference images created yet.\nRerun stranger with the --generate flag')
   }
 
   // Remove any previously generated images
@@ -242,17 +237,11 @@ Stranger.prototype.compareImages = function () {
   var diffedImages = []
   var similarImages = []
 
-  console.log('')
-
   self.config.tests.forEach(function (test, idx) {
     var filename = self.createFilename(test)
 
     fs.readFile(self.config.baseDir + filename, function (err, buf) {
       if (err) {
-        if (!self.callback) {
-          console.log(chalk.yellow('! ' + filename))
-        }
-
         self.imagesProcessed++
         mismatchedImages.push(filename)
         return self.noMatchCount++
@@ -271,47 +260,25 @@ Stranger.prototype.compareImages = function () {
         if (!imagesAreSame) {
           self.diffCount++
           diffedImages.push(filename)
-
-          if (!self.callback) {
-            console.log(chalk.red('× ' + filename))
-          }
         } else {
           fs.unlink(self.config.diffDir + filename)
           similarImages.push(filename)
-
-          if (!self.callback) {
-            console.log(chalk.green('√ ' + filename))
-          }
         }
 
         self.imagesProcessed++
 
         if (self.imagesProcessed === self.config.tests.length) {
-          if (self.callback) {
-            self.callback({
-              imagesGenerated: 0,
-              imagesProcessed: self.imagesProcessed,
-              imagesDir: self.config.compareDir,
-              noMatchCount: self.noMatchCount,
-              similarImages: similarImages,
-              diffedImages: diffedImages,
-              mismatchedImages: mismatchedImages,
-              diffCount: self.diffCount,
-              diffDir: self.config.diffDir
-            })
-          } else {
-            console.log('')
-
-            if (self.noMatchCount) {
-              console.log(chalk.yellow('There ' + (self.noMatchCount === 1 ? 'was' : 'were') + ' ' + self.noMatchCount + ' ' + (self.noMatchCount === 1 ? 'image' : 'images') + ' that didn\'t have a reference image.\n') + 'It\'s recommended that you re-run stranger with the ' + chalk.yellow('--generate') + ' flag.\n')
-            }
-
-            if (self.diffCount) {
-              console.log(chalk.yellow(self.diffCount + ' ' + (self.diffCount === 1 ? 'diff' : 'diffs') + ' found! Check out the ' + self.config.diffDir + ' directory for the ' + (self.diffCount === 1 ? 'diff' : 'diffs') + '.'))
-            } else {
-              console.log(chalk.green('No diffs found!'))
-            }
-          }
+          self.callback({
+            imagesGenerated: 0,
+            imagesProcessed: self.imagesProcessed,
+            imagesDir: self.config.compareDir,
+            noMatchCount: self.noMatchCount,
+            similarImages: similarImages,
+            diffedImages: diffedImages,
+            mismatchedImages: mismatchedImages,
+            diffCount: self.diffCount,
+            diffDir: self.config.diffDir
+          })
         }
       })
     })

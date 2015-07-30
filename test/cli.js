@@ -142,15 +142,15 @@ test('The tool generates a diff', function (t) {
       }
 
       stranger2.stdout.on('data', function (stdout) {
-        t.ok(stdout.toString(), 'The diff message message was generated')
+        t.ok(stdout.toString(), 'The good image\'s filename was printed')
       })
 
       stranger2.stderr.on('data', function (stderr) {
-        t.notOk(stderr, 'There were no errors')
+        t.ok(stderr.toString(), 'There were errors reported')
       })
 
       stranger2.on('close', function (code) {
-        t.equal(code, 0, 'It exited with a 0 status')
+        t.equal(code, 1, 'It exited with a 1 status')
         t.end()
       })
     })
@@ -230,11 +230,11 @@ test('The tool warns the user if there\'s a mismatch', function (t) {
       }
 
       stranger2.stdout.on('data', function (stdout) {
-        t.ok(stdout.toString(), 'The diff message message was generated')
+        t.ok(stdout.toString(), 'The images without a diff were printed')
       })
 
       stranger2.stderr.on('data', function (stderr) {
-        t.notOk(stderr, 'There were no errors')
+        t.ok(stderr.toString(), 'There were some errors')
       })
 
       stranger2.on('close', function (code) {
