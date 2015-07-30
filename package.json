@@ -1,6 +1,6 @@
 {
   "name": "stranger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A visual regression testing framework for node.js",
   "main": "sranger.js",
   "bin": {
