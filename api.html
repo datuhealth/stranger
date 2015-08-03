@@ -1,259 +1,259 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no">
 
-    <link href="site/css/site.css" rel="stylesheet">
+  <link href="site/css/site.css" rel="stylesheet">
 
-    <script async src="site/js/picturefill.min.js"></script>
+  <script async src="site/js/picturefill.min.js"></script>
 
-    <title>api — stranger</title>
+  <title>api — stranger</title>
 </head>
 <body>
-    <svg xlmns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="github-logo" viewbox="0 0 18 18">
-            <title>github logo</title>
-            <path d="M9.00167821,0 C6.44650157,0.0586049689 4.32210331,0.934736112 2.62841971,2.62841971 C0.934736112,4.32210331 0.0586049689,6.44650157 0,9.00167821 C0.0351629813,11.0176891 0.615343471,12.7875327 1.74055887,14.3112618 C2.86577428,15.834991 4.33673693,16.9133063 6.15349097,17.54624 C6.37618985,17.5814029 6.53442089,17.5491707 6.62818884,17.4495422 C6.72195679,17.3499138 6.76884006,17.2356358 6.76884006,17.1067049 L6.75125866,15.4364716 C5.64948525,15.6005655 4.88763208,15.536101 4.4656763,15.2430762 C4.04372053,14.9500514 3.79758335,14.6570309 3.72725739,14.3640061 C3.66865242,14.2116331 3.55144424,13.994798 3.37562933,13.7134942 C3.19981442,13.4321903 3.01228134,13.227076 2.81302444,13.0981451 C2.62548854,13.0043771 2.48776893,12.8871689 2.39986148,12.746517 C2.31195402,12.6058651 2.44381323,12.5296798 2.79544304,12.5179588 C3.14707285,12.5296798 3.44302351,12.6468879 3.68330388,12.8695868 C3.92358425,13.0922857 4.0847455,13.2798188 4.16679245,13.4321917 C4.60046922,14.0768464 5.07516235,14.4020991 5.59088608,14.4079596 C6.1066098,14.4138201 6.50511762,14.3405649 6.78642147,14.188192 C6.83330544,13.8951672 6.90656055,13.64903 7.006189,13.4497731 C7.10581745,13.2505162 7.22595583,13.0922852 7.36660776,12.9750752 C6.31171832,12.9047493 5.37405288,12.5677758 4.55358332,11.9641446 C3.73311375,11.3605134 3.29944349,10.2148034 3.25255951,8.52698034 C3.2642805,8.0346986 3.34925644,7.58930752 3.50748985,7.19079373 C3.66572327,6.79227994 3.89134901,6.43479499 4.18437386,6.11832816 C4.11404789,6.00111822 4.0554438,5.73153941 4.00855983,5.30958363 C3.96167585,4.88762786 4.04958199,4.36019105 4.27228087,3.72725739 C4.27228087,3.6920944 4.47153478,3.70088502 4.87004857,3.75362949 C5.26856235,3.80637396 5.89562611,4.10818502 6.75125866,4.65907173 C7.47796028,4.45981484 8.22809262,4.36018789 9.00167821,4.36018789 C9.7752638,4.36018789 10.5253962,4.45981484 11.2520978,4.65907173 C12.1077303,4.10818502 12.7347941,3.80637396 13.1333079,3.75362949 C13.5318217,3.70088502 13.7310756,3.6920944 13.7310756,3.72725739 C13.9537744,4.36019105 14.0416806,4.88762786 13.9947966,5.30958363 C13.9479126,5.73153941 13.8893085,6.00111822 13.8189826,6.11832816 C14.1120074,6.43479499 14.3376332,6.79227994 14.4958666,7.19079373 C14.6541,7.58930752 14.7390759,8.0346986 14.7507969,8.52698034 C14.7039129,10.2148034 14.2673125,11.3605134 13.4409824,11.9641446 C12.6146524,12.5677758 11.6799171,12.9047493 10.6367487,12.9750752 C10.8008426,13.1157272 10.9414924,13.3237717 11.0587023,13.599215 C11.1759123,13.8746584 11.2403768,14.2233527 11.2520978,14.6453085 L11.2345164,17.1067049 C11.2345164,17.2356358 11.2813996,17.3499138 11.3751676,17.4495422 C11.4689355,17.5491707 11.6271666,17.5814029 11.8498655,17.54624 C13.6666195,16.9133063 15.1375822,15.834991 16.2627976,14.3112618 C17.388013,12.7875327 17.9681934,11.0176891 18.0033564,9.00167821 C17.9447515,6.44650157 17.0686203,4.32210331 15.3749367,2.62841971 C13.6812531,0.934736112 11.5568549,0.0586049689 9.00167821,0 L9.00167821,0 Z"></path>
-        </symbol>
-        <symbol id="link-icon" viewBox="0 0 18 9">
-            <title>Link icon</title>
-            <path d="M13.5,0 L11.0742188,0 C11.5078147,0.292970215 11.8974592,0.650388516 12.2431641,1.07226562 C12.5888689,1.49414273 12.8261712,1.88671693 12.9550781,2.25 L13.4824219,2.25 C14.0800811,2.27343762 14.5986306,2.50781027 15.0380859,2.953125 C15.4775413,3.39843973 15.7089843,3.91405957 15.7324219,4.5 C15.7089843,5.08594043 15.4716819,5.60156027 15.0205078,6.046875 C14.5693337,6.49218973 14.0566435,6.72656238 13.4824219,6.75 L10.1074219,6.75 C9.53320025,6.72656238 9.02051007,6.49218973 8.56933594,6.046875 C8.11816181,5.60156027 7.88085949,5.08594043 7.85742188,4.5 C7.86914068,4.0898417 7.97460838,3.71484545 8.17382812,3.375 L5.765625,3.375 C5.67187453,3.73828307 5.625,4.11327932 5.625,4.5 C5.67187523,5.67188086 6.13769089,6.70312055 7.02246094,7.59375 C7.90723099,8.48437945 8.93554102,8.95312477 10.1074219,9 L13.5,9 C14.6718809,8.95312477 15.7031205,8.48437945 16.59375,7.59375 C17.4843795,6.70312055 17.9531248,5.67188086 18,4.5 C17.9531248,3.32811914 17.4843795,2.29687945 16.59375,1.40625 C15.7031205,0.515620547 14.6718809,0.0468752344 13.5,0 L13.5,0 Z M5.04492188,6.75 L4.51757812,6.75 C3.91991889,6.72656238 3.40136938,6.49218973 2.96191406,6.046875 C2.52245874,5.60156027 2.29101574,5.08594043 2.26757812,4.5 C2.29101574,3.91405957 2.52831806,3.39843973 2.97949219,2.953125 C3.43066632,2.50781027 3.9433565,2.27343762 4.51757812,2.25 L7.89257812,2.25 C8.46679975,2.27343762 8.97948993,2.50781027 9.43066406,2.953125 C9.88183819,3.39843973 10.1191405,3.91405957 10.1425781,4.5 C10.1308593,4.9101583 10.0253916,5.28515455 9.82617188,5.625 L12.234375,5.625 C12.3281255,5.26171693 12.375,4.88672068 12.375,4.5 C12.3281248,3.32811914 11.8623091,2.29687945 10.9775391,1.40625 C10.092769,0.515620547 9.06445898,0.0468752344 7.89257812,0 L4.5,0 C3.32811914,0.0468752344 2.29687945,0.515620547 1.40625,1.40625 C0.515620547,2.29687945 0.0468752344,3.32811914 0,4.5 C0.0468752344,5.67188086 0.515620547,6.70312055 1.40625,7.59375 C2.29687945,8.48437945 3.32811914,8.95312477 4.5,9 L6.92578125,9 C6.49218533,8.70702979 6.10254079,8.34961148 5.75683594,7.92773438 C5.41113108,7.50585727 5.17382877,7.11328307 5.04492188,6.75 L5.04492188,6.75 Z"></path>
-        </symbol>
-    </svg>
-    <header class="main-nav">
-        <nav class="container">
-            <ul>
-                <li><a href="index.html">intro</a></li>
-                <li><a href="examples.html">examples</a></li>
-                <li class="active"><a href="api.html">api</a></li>
-                <li class="github">
-                    <a href="https://github.com/datuhealth/stranger">
-                        <svg class="github-logo">
-                            <use xlink:href="#github-logo">
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <section class="container api">
-        <h1 class="h1">api</h1>
-        <p class="intro-text">stranger provides a simple api for <a href="#configuration">configuration</a>, the <a href="#cli">cli</a> tool, and for <a href="#programmatic-usage">programmatic usage</a>.</p>
-        <h2 class="h2" id="configuration">
-            <a href="#configuration" class="link-icon">
-                <svg>
-                    <use xlink:href="#link-icon">
-                </svg>
-            </a>Configuration</h2>
-        <dl>
-            <dt id="baseDir">
-                <a href="#baseDir" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>baseDir</dt>
-            <dd>Required string. This is the path where the base set of images should be saved to.</dd>
-            <dt id="compareDir">
-                <a href="#compareDir" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>compareDir</dt>
-            <dd>Required string. This is the path where the set of images to be compared should be saved to.</dd>
-            <dt id="diffDir">
-                <a href="#diffDir" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>diffDir</dt>
-            <dd>Required string. This is the path where any diff images should be saved to.</dd>
-            <dt id="browser">
-                <a href="#browser" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>browser</dt>
-            <dd>Optional string. The browser to be used for screenshots.Can be chrome, firefox, safari, ie, or opera. <em>Defaults to firefox</em>.</dd>
-            <dt id="browserOptions">
-                <a href="#browserOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>browserOptions</dt>
-            <dd>Optional object. Options to be set in here configure the viewport of the browser taking screenshots.</dd>
-            <dt id="browswerOptions-width">
-                <a href="#browserOptions-width" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>browserOptions.width</dt>
-            <dd>Optional number. The width of the viewport in pixels. <em>Defaults to 1024</em>.</dd>
-            <dt id="browserOptions-height">
-                <a href="#browserOptions-height" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>browserOptions.height</dt>
-            <dd>Optional number. The height of the viewport in pixels. <em>Defaults to 768</em>.</dd>
-            <dt id="chromeOptions">
-                <a href="#chromeOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>chromeOptions</dt>
-            <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_chrome_class_Options.html">selenium docs</a> for details.</dd>
-            <dt id="firefoxOptions">
-                <a href="#firefoxOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>firefoxOptions</dt>
-            <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_firefox_class_Options.html">selenium docs</a> for details.</dd>
-            <dt id="ieOptions">
-                <a href="#ieOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>ieOptions</dt>
-            <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_ie_class_Options.html">selenium docs</a> for details.</dd>
-            <dt id="operaOptions">
-                <a href="#operaOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>operaOptions</dt>
-            <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_opera_class_Options.html">selenium docs</a> for details</dd>
-            <dt id="safariOptions">
-                <a href="#safariOptions" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>safariOptions</dt>
-            <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_safari_class_Options.html">selenium docs</a> for details</dd>
-            <dt id="tests">
-                <a href="#tests" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>tests</dt>
-            <dd>Required array of test objects. This list of tests produces the screenshots and determine which images to compare.</dd>
-            <dt id="test-url">
-                <a href="#test-url" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>test.url</dt>
-            <dd>Required string. The URL to take the screenshot of. If this is a local file, either add the <code>file://</code> protocol, or set local to true.</dd>
-            <dt id="test-name">
-                <a href="#test-name" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>test.name</dt>
-            <dd>Optional string. The filename for the screenshot. If missing, the last part of the path name will be used.</dd>
-            <dt id="test-local">
-                <a href="#test-local" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>test.local</dt>
-            <dd>Optional boolean. If set to true, stranger forces the <code>file://</code> protocol. Defaults to false.</dd>
-        </dl>
-        <h2 class="h2" id="cli">
-            <a href="#cli" class="link-icon">
-                <svg>
-                    <use xlink:href="#link-icon">
-                </svg>
-            </a>CLI</h2>
-        <pre><code>$ stranger [options]</code></pre>
-        <dl>
-            <dt id="cli-config">
-                <a href="#cli-config" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>--config, -c</dt>
-            <dd>Required path. The path to the configuration file to use.</dd>
-            <dt id="cli-generate">
-                <a href="#cli-generate" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>--generate, -g</dt>
-            <dd>Optional. Whether to generate the base images or not.</dd>
-            <dt id="cli-help">
-                <a href="#cli-help" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>--help, -h</dt>
-            <dd>Optional. Print the help text.</dd>
-        </dl>
-        <h2 class="h2" id="programmatic-usage">
-            <a href="#programmatic-usage" class="link-icon">
-                <svg>
-                    <use xlink:href="#link-icon">
-                </svg>
-            </a>Programmatic usage</h2>
-        <pre><code>vr(config, generate, callback);</code></pre>
-        <dl>
-            <dt id="programmatic-config">
-                <a href="#programmatic-config" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>config</dt>
-            <dd>Required string. The path to the configuration file to use.</dd>
-            <dt id="programmatic-generate">
-                <a href="#programmatic-generate" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>generate</dt>
-            <dd>Required boolean. Whether or not to generate the base set of images.</dd>
-            <dt id="programmatic-callback">
-                <a href="#programmatic-callback" class="link-icon">
-                    <svg>
-                        <use xlink:href="#link-icon">
-                    </svg>
-                </a>callback</dt>
-            <dd>Optional function. The function to run when the tool has finished diffing the images. An object will be passed back containing details of the results.</dd>
-        </dl>
-    </section>
-    <footer class="container footer">
-        <p>stranger is licensed under the <a href="https://github.com/datuhealth/stranger/blob/master/LICENSE.MD">Apache 2.0</a> license.</p>
-        <p>Copyright 2015 Datu Health, inc.</p>
-    </footer>
-    <script>
-    var toggled = false
-    var docEl = document.body
+  <svg xlmns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="github-logo" viewbox="0 0 18 18">
+      <title>github logo</title>
+      <path d="M9.00167821,0 C6.44650157,0.0586049689 4.32210331,0.934736112 2.62841971,2.62841971 C0.934736112,4.32210331 0.0586049689,6.44650157 0,9.00167821 C0.0351629813,11.0176891 0.615343471,12.7875327 1.74055887,14.3112618 C2.86577428,15.834991 4.33673693,16.9133063 6.15349097,17.54624 C6.37618985,17.5814029 6.53442089,17.5491707 6.62818884,17.4495422 C6.72195679,17.3499138 6.76884006,17.2356358 6.76884006,17.1067049 L6.75125866,15.4364716 C5.64948525,15.6005655 4.88763208,15.536101 4.4656763,15.2430762 C4.04372053,14.9500514 3.79758335,14.6570309 3.72725739,14.3640061 C3.66865242,14.2116331 3.55144424,13.994798 3.37562933,13.7134942 C3.19981442,13.4321903 3.01228134,13.227076 2.81302444,13.0981451 C2.62548854,13.0043771 2.48776893,12.8871689 2.39986148,12.746517 C2.31195402,12.6058651 2.44381323,12.5296798 2.79544304,12.5179588 C3.14707285,12.5296798 3.44302351,12.6468879 3.68330388,12.8695868 C3.92358425,13.0922857 4.0847455,13.2798188 4.16679245,13.4321917 C4.60046922,14.0768464 5.07516235,14.4020991 5.59088608,14.4079596 C6.1066098,14.4138201 6.50511762,14.3405649 6.78642147,14.188192 C6.83330544,13.8951672 6.90656055,13.64903 7.006189,13.4497731 C7.10581745,13.2505162 7.22595583,13.0922852 7.36660776,12.9750752 C6.31171832,12.9047493 5.37405288,12.5677758 4.55358332,11.9641446 C3.73311375,11.3605134 3.29944349,10.2148034 3.25255951,8.52698034 C3.2642805,8.0346986 3.34925644,7.58930752 3.50748985,7.19079373 C3.66572327,6.79227994 3.89134901,6.43479499 4.18437386,6.11832816 C4.11404789,6.00111822 4.0554438,5.73153941 4.00855983,5.30958363 C3.96167585,4.88762786 4.04958199,4.36019105 4.27228087,3.72725739 C4.27228087,3.6920944 4.47153478,3.70088502 4.87004857,3.75362949 C5.26856235,3.80637396 5.89562611,4.10818502 6.75125866,4.65907173 C7.47796028,4.45981484 8.22809262,4.36018789 9.00167821,4.36018789 C9.7752638,4.36018789 10.5253962,4.45981484 11.2520978,4.65907173 C12.1077303,4.10818502 12.7347941,3.80637396 13.1333079,3.75362949 C13.5318217,3.70088502 13.7310756,3.6920944 13.7310756,3.72725739 C13.9537744,4.36019105 14.0416806,4.88762786 13.9947966,5.30958363 C13.9479126,5.73153941 13.8893085,6.00111822 13.8189826,6.11832816 C14.1120074,6.43479499 14.3376332,6.79227994 14.4958666,7.19079373 C14.6541,7.58930752 14.7390759,8.0346986 14.7507969,8.52698034 C14.7039129,10.2148034 14.2673125,11.3605134 13.4409824,11.9641446 C12.6146524,12.5677758 11.6799171,12.9047493 10.6367487,12.9750752 C10.8008426,13.1157272 10.9414924,13.3237717 11.0587023,13.599215 C11.1759123,13.8746584 11.2403768,14.2233527 11.2520978,14.6453085 L11.2345164,17.1067049 C11.2345164,17.2356358 11.2813996,17.3499138 11.3751676,17.4495422 C11.4689355,17.5491707 11.6271666,17.5814029 11.8498655,17.54624 C13.6666195,16.9133063 15.1375822,15.834991 16.2627976,14.3112618 C17.388013,12.7875327 17.9681934,11.0176891 18.0033564,9.00167821 C17.9447515,6.44650157 17.0686203,4.32210331 15.3749367,2.62841971 C13.6812531,0.934736112 11.5568549,0.0586049689 9.00167821,0 L9.00167821,0 Z"></path>
+    </symbol>
+    <symbol id="link-icon" viewBox="0 0 18 9">
+      <title>Link icon</title>
+      <path d="M13.5,0 L11.0742188,0 C11.5078147,0.292970215 11.8974592,0.650388516 12.2431641,1.07226562 C12.5888689,1.49414273 12.8261712,1.88671693 12.9550781,2.25 L13.4824219,2.25 C14.0800811,2.27343762 14.5986306,2.50781027 15.0380859,2.953125 C15.4775413,3.39843973 15.7089843,3.91405957 15.7324219,4.5 C15.7089843,5.08594043 15.4716819,5.60156027 15.0205078,6.046875 C14.5693337,6.49218973 14.0566435,6.72656238 13.4824219,6.75 L10.1074219,6.75 C9.53320025,6.72656238 9.02051007,6.49218973 8.56933594,6.046875 C8.11816181,5.60156027 7.88085949,5.08594043 7.85742188,4.5 C7.86914068,4.0898417 7.97460838,3.71484545 8.17382812,3.375 L5.765625,3.375 C5.67187453,3.73828307 5.625,4.11327932 5.625,4.5 C5.67187523,5.67188086 6.13769089,6.70312055 7.02246094,7.59375 C7.90723099,8.48437945 8.93554102,8.95312477 10.1074219,9 L13.5,9 C14.6718809,8.95312477 15.7031205,8.48437945 16.59375,7.59375 C17.4843795,6.70312055 17.9531248,5.67188086 18,4.5 C17.9531248,3.32811914 17.4843795,2.29687945 16.59375,1.40625 C15.7031205,0.515620547 14.6718809,0.0468752344 13.5,0 L13.5,0 Z M5.04492188,6.75 L4.51757812,6.75 C3.91991889,6.72656238 3.40136938,6.49218973 2.96191406,6.046875 C2.52245874,5.60156027 2.29101574,5.08594043 2.26757812,4.5 C2.29101574,3.91405957 2.52831806,3.39843973 2.97949219,2.953125 C3.43066632,2.50781027 3.9433565,2.27343762 4.51757812,2.25 L7.89257812,2.25 C8.46679975,2.27343762 8.97948993,2.50781027 9.43066406,2.953125 C9.88183819,3.39843973 10.1191405,3.91405957 10.1425781,4.5 C10.1308593,4.9101583 10.0253916,5.28515455 9.82617188,5.625 L12.234375,5.625 C12.3281255,5.26171693 12.375,4.88672068 12.375,4.5 C12.3281248,3.32811914 11.8623091,2.29687945 10.9775391,1.40625 C10.092769,0.515620547 9.06445898,0.0468752344 7.89257812,0 L4.5,0 C3.32811914,0.0468752344 2.29687945,0.515620547 1.40625,1.40625 C0.515620547,2.29687945 0.0468752344,3.32811914 0,4.5 C0.0468752344,5.67188086 0.515620547,6.70312055 1.40625,7.59375 C2.29687945,8.48437945 3.32811914,8.95312477 4.5,9 L6.92578125,9 C6.49218533,8.70702979 6.10254079,8.34961148 5.75683594,7.92773438 C5.41113108,7.50585727 5.17382877,7.11328307 5.04492188,6.75 L5.04492188,6.75 Z"></path>
+    </symbol>
+  </svg>
+  <header class="main-nav">
+    <nav class="container">
+      <ul>
+        <li><a href="index.html">intro</a></li>
+        <li><a href="examples.html">examples</a></li>
+        <li class="active"><a href="api.html">api</a></li>
+        <li class="github">
+          <a href="https://github.com/datuhealth/stranger">
+            <svg class="github-logo">
+              <use xlink:href="#github-logo">
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="container api">
+    <h1 class="h1">api</h1>
+    <p class="intro-text">stranger provides a simple api for <a href="#configuration">configuration</a>, the <a href="#cli">cli</a> tool, and for <a href="#programmatic-usage">programmatic usage</a>.</p>
+    <h2 class="h2" id="configuration">
+      <a href="#configuration" class="link-icon">
+        <svg>
+          <use xlink:href="#link-icon">
+        </svg>
+      </a>Configuration</h2>
+    <dl>
+      <dt id="baseDir">
+        <a href="#baseDir" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>baseDir</dt>
+      <dd>Required string. This is the path where the base set of images should be saved to.</dd>
+      <dt id="compareDir">
+        <a href="#compareDir" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>compareDir</dt>
+      <dd>Required string. This is the path where the set of images to be compared should be saved to.</dd>
+      <dt id="diffDir">
+        <a href="#diffDir" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>diffDir</dt>
+      <dd>Required string. This is the path where any diff images should be saved to.</dd>
+      <dt id="browser">
+        <a href="#browser" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>browser</dt>
+      <dd>Optional string. The browser to be used for screenshots.Can be chrome, firefox, safari, ie, or opera. <em>Defaults to firefox</em>.</dd>
+      <dt id="browserOptions">
+        <a href="#browserOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>browserOptions</dt>
+      <dd>Optional object. Options to be set in here configure the viewport of the browser taking screenshots.</dd>
+      <dt id="browswerOptions-width">
+        <a href="#browserOptions-width" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>browserOptions.width</dt>
+      <dd>Optional number. The width of the viewport in pixels. <em>Defaults to 1024</em>.</dd>
+      <dt id="browserOptions-height">
+        <a href="#browserOptions-height" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>browserOptions.height</dt>
+      <dd>Optional number. The height of the viewport in pixels. <em>Defaults to 768</em>.</dd>
+      <dt id="chromeOptions">
+        <a href="#chromeOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>chromeOptions</dt>
+      <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_chrome_class_Options.html">selenium docs</a> for details.</dd>
+      <dt id="firefoxOptions">
+        <a href="#firefoxOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>firefoxOptions</dt>
+      <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_firefox_class_Options.html">selenium docs</a> for details.</dd>
+      <dt id="ieOptions">
+        <a href="#ieOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>ieOptions</dt>
+      <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_ie_class_Options.html">selenium docs</a> for details.</dd>
+      <dt id="operaOptions">
+        <a href="#operaOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>operaOptions</dt>
+      <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_opera_class_Options.html">selenium docs</a> for details</dd>
+      <dt id="safariOptions">
+        <a href="#safariOptions" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>safariOptions</dt>
+      <dd>Optional object. Refer to the <a href="https://selenium.googlecode.com/git/docs/api/javascript/module_selenium-webdriver_safari_class_Options.html">selenium docs</a> for details</dd>
+      <dt id="tests">
+        <a href="#tests" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>tests</dt>
+      <dd>Required array of test objects. This list of tests produces the screenshots and determine which images to compare.</dd>
+      <dt id="test-url">
+        <a href="#test-url" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>test.url</dt>
+      <dd>Required string. The URL to take the screenshot of. If this is a local file, either add the <code>file://</code> protocol, or set local to true.</dd>
+      <dt id="test-name">
+        <a href="#test-name" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>test.name</dt>
+      <dd>Optional string. The filename for the screenshot. If missing, the last part of the path name will be used.</dd>
+      <dt id="test-local">
+        <a href="#test-local" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>test.local</dt>
+      <dd>Optional boolean. If set to true, stranger forces the <code>file://</code> protocol. Defaults to false.</dd>
+    </dl>
+    <h2 class="h2" id="cli">
+      <a href="#cli" class="link-icon">
+        <svg>
+          <use xlink:href="#link-icon">
+        </svg>
+      </a>CLI</h2>
+    <pre><code>$ stranger [options]</code></pre>
+    <dl>
+      <dt id="cli-config">
+        <a href="#cli-config" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>--config, -c</dt>
+      <dd>Required path. The path to the configuration file to use.</dd>
+      <dt id="cli-generate">
+        <a href="#cli-generate" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>--generate, -g</dt>
+      <dd>Optional. Whether to generate the base images or not.</dd>
+      <dt id="cli-help">
+        <a href="#cli-help" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>--help, -h</dt>
+      <dd>Optional. Print the help text.</dd>
+    </dl>
+    <h2 class="h2" id="programmatic-usage">
+      <a href="#programmatic-usage" class="link-icon">
+        <svg>
+          <use xlink:href="#link-icon">
+        </svg>
+      </a>Programmatic usage</h2>
+    <pre><code>vr(config, generate, callback);</code></pre>
+    <dl>
+      <dt id="programmatic-config">
+        <a href="#programmatic-config" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>config</dt>
+      <dd>Required string. The path to the configuration file to use.</dd>
+      <dt id="programmatic-generate">
+        <a href="#programmatic-generate" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>generate</dt>
+      <dd>Required boolean. Whether or not to generate the base set of images.</dd>
+      <dt id="programmatic-callback">
+        <a href="#programmatic-callback" class="link-icon">
+          <svg>
+            <use xlink:href="#link-icon">
+          </svg>
+        </a>callback</dt>
+      <dd>Optional function. The function to run when the tool has finished diffing the images. An object will be passed back containing details of the results.</dd>
+    </dl>
+  </section>
+  <footer class="container footer">
+    <p>stranger is licensed under the <a href="https://github.com/datuhealth/stranger/blob/master/LICENSE.MD">Apache 2.0</a> license.</p>
+    <p>Copyright 2015 Datu Health, inc.</p>
+  </footer>
+  <script>
+  var toggled = false
+  var docEl = document.body
 
-    docEl.scrollTop = 1
+  docEl.scrollTop = 1
 
-    if (docEl.scrollTop !== 1) {
-        docEl = document.documentElement
+  if (docEl.scrollTop !== 1) {
+    docEl = document.documentElement
+  }
+
+  function adjustPosition () {
+    var el = document.querySelector(window.location.hash)
+    var docEl = document.documentElement.scrollTop > 0 ? document.documentElement : document.body
+    var nav = document.querySelector('.main-nav')
+
+    docEl.scrollTop = el.offsetTop - +nav.clientHeight - 20
+  }
+
+  window.addEventListener('scroll', function() {
+    if (!toggled && window.location.hash) {
+      adjustPosition()
+
+      toggled = true
     }
+  })
 
-    function adjustPosition () {
-        var el = document.querySelector(window.location.hash)
-        var docEl = document.documentElement.scrollTop > 0 ? document.documentElement : document.body
-        var nav = document.querySelector('.main-nav')
-
-        docEl.scrollTop = el.offsetTop - +nav.clientHeight - 20
-    }
-
-    window.addEventListener('scroll', function() {
-        if (!toggled && window.location.hash) {
-            adjustPosition()
-
-            toggled = true
-        }
-    })
-
-    window.addEventListener('hashchange', function () {
-        adjustPosition()
-    })
-    </script>
+  window.addEventListener('hashchange', function () {
+    adjustPosition()
+  })
+  </script>
 </body>
 </html>
