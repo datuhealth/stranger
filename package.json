@@ -33,7 +33,7 @@
     "buffered-spawn": "^1.1.2",
     "pre-commit": "^1.0.10",
     "tap-spec": "^4.0.2",
-    "tape": "^4.0.0",
+    "tape": "^4.2.1",
     "tape-run": "^1.0.0"
   }
 }
