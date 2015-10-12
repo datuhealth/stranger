@@ -86,17 +86,13 @@ test('The tool fails if no config path is provided', function (t) {
 })
 
 test('The tool fails if no base images have been generated', function (t) {
-  del('./test/img/**/*.png', function (err) {
+  del('./test/img/**/*.png').then(function () {
     var stranger = spawn('./bin/cmd.js', [
       '--config',
       './test/lib/basic.json'
     ], {
       cwd: process.cwd()
     })
-
-    if (err) {
-      t.fail(err)
-    }
 
     stranger.stdout.on('data', function (stdout) {
       t.notOk(stdout, 'The error text wasn\'t printed to stdout')
@@ -110,11 +106,14 @@ test('The tool fails if no base images have been generated', function (t) {
       t.equal(code, 1, 'It exited with a 1 status')
       t.end()
     })
+  }).catch(function (err) {
+    process.stdout.write(err)
+    t.fail(err)
   })
 })
 
 test('The tool generates a diff', function (t) {
-  del('./test/img/deskop/**/*', function (err) {
+  del('./test/img/deskop/**/*').then(function () {
     var stranger = spawn('./bin/cmd.js', [
       '--config',
       './test/lib/basic.json',
@@ -122,10 +121,6 @@ test('The tool generates a diff', function (t) {
     ], {
       cwd: process.cwd()
     })
-
-    if (err) {
-      t.fail(err)
-    }
 
     stranger.on('close', function (code) {
       t.equal(code, 0, 'It exited with a 0 status')
@@ -136,10 +131,6 @@ test('The tool generates a diff', function (t) {
       ], {
         cwd: process.cwd()
       })
-
-      if (err) {
-        t.fail(err)
-      }
 
       stranger2.stdout.on('data', function (stdout) {
         t.ok(stdout.toString(), 'The good image\'s filename was printed')
@@ -154,11 +145,14 @@ test('The tool generates a diff', function (t) {
         t.end()
       })
     })
+  }).catch(function (err) {
+    process.stdout.write(err)
+    t.fail(err)
   })
 })
 
 test('The tool doesn\'t generate a diff', function (t) {
-  del('./test/img/deskop/**/*', function (err) {
+  del('./test/img/deskop/**/*').then(function () {
     var stranger = spawn('./bin/cmd.js', [
       '--config',
       './test/lib/basic.json',
@@ -166,10 +160,6 @@ test('The tool doesn\'t generate a diff', function (t) {
     ], {
       cwd: process.cwd()
     })
-
-    if (err) {
-      t.fail(err)
-    }
 
     stranger.on('close', function (code) {
       t.equal(code, 0, 'It exited with a 0 status')
@@ -180,10 +170,6 @@ test('The tool doesn\'t generate a diff', function (t) {
       ], {
         cwd: process.cwd()
       })
-
-      if (err) {
-        t.fail(err)
-      }
 
       stranger2.stdout.on('data', function (stdout) {
         t.ok(stdout.toString(), 'The diff message message was generated')
@@ -198,11 +184,14 @@ test('The tool doesn\'t generate a diff', function (t) {
         t.end()
       })
     })
+  }).catch(function (err) {
+    process.stdout.write(err)
+    t.fail(err)
   })
 })
 
 test('The tool warns the user if there\'s a mismatch', function (t) {
-  del('./test/img/deskop/**/*', function (err) {
+  del('./test/img/deskop/**/*').then(function () {
     var stranger = spawn('./bin/cmd.js', [
       '--config',
       './test/lib/basic.json',
@@ -210,10 +199,6 @@ test('The tool warns the user if there\'s a mismatch', function (t) {
     ], {
       cwd: process.cwd()
     })
-
-    if (err) {
-      t.fail(err)
-    }
 
     stranger.on('close', function (code) {
       t.equal(code, 0, 'It exited with a 0 status')
@@ -224,10 +209,6 @@ test('The tool warns the user if there\'s a mismatch', function (t) {
       ], {
         cwd: process.cwd()
       })
-
-      if (err) {
-        t.fail(err)
-      }
 
       stranger2.stdout.on('data', function (stdout) {
         t.ok(stdout.toString(), 'The images without a diff were printed')
@@ -242,11 +223,14 @@ test('The tool warns the user if there\'s a mismatch', function (t) {
         t.end()
       })
     })
+  }).catch(function (err) {
+    process.stdout.write(err)
+    t.fail(err)
   })
 })
 
 test('The tool makes the filename match the URL or the name', function (t) {
-  del('./test/img/deskop/**/*', function (err) {
+  del('./test/img/deskop/**/*').then(function () {
     spawn('./bin/cmd.js', [
       '--config',
       './test/lib/basic.json',
@@ -254,10 +238,6 @@ test('The tool makes the filename match the URL or the name', function (t) {
     ], {
       cwd: process.cwd()
     })
-
-    if (err) {
-      t.fail(err)
-    }
 
     fs.readdir('./test/img/desktop/master', function (err, paths) {
       if (err) {
@@ -269,5 +249,8 @@ test('The tool makes the filename match the URL or the name', function (t) {
       t.equal(paths[1], 'dynamic.html.png', 'The second image is called dynamic.html.png')
       t.end()
     })
+  }).catch(function (err) {
+    process.stdout.write(err)
+    t.fail(err)
   })
 })

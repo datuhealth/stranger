@@ -62,12 +62,10 @@ function Stranger (options, generate, callback) {
 
     // Otherwise, compare the images
     if (!self.generateImages) {
-      del(self.config.diffDir + '**/*', function (err) {
-        if (err) {
-          throw new Error(err)
-        }
-
+      del(self.config.diffDir + '**/*').then(function () {
         self.compareImages()
+      }).catch(function (err) {
+        throw new Error(err)
       })
     }
   })
@@ -219,7 +217,7 @@ Stranger.prototype.checkForFiles = function (path) {
  * @returns {string} - The best guess for a filename. Doesn't guaruntee uniqueness.
  */
 Stranger.prototype.createFilename = function (test) {
-  var filename = test.name || test.url.split('/')[ test.url.split('/').length - 1] || 'index'
+  var filename = test.name || test.url.split('/')[test.url.split('/').length - 1] || 'index'
 
   return filename + '.png'
 }

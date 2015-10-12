@@ -15,7 +15,7 @@ test('The tool fails if no config is provided', function (t) {
 })
 
 test('The tool fails if no base images have been generated', function (t) {
-  del('./test/img/**/*.png', function () {
+  del('./test/img/**/*.png').then(function () {
     t.throws(function () {
       stranger(basicConfig, false)
     }, 'It throws when no base images exist')
@@ -24,7 +24,7 @@ test('The tool fails if no base images have been generated', function (t) {
 })
 
 test('The tool generates the base images', function (t) {
-  del('./test/img/**/*.png', function () {
+  del('./test/img/**/*.png').then(function () {
     stranger(basicConfig, true, function (results) {
       t.ok(results, 'It send the results through')
       t.equal(typeof results, 'object', 'Results is an object')
@@ -37,7 +37,7 @@ test('The tool generates the base images', function (t) {
 })
 
 test('The tool compares similar images', function (t) {
-  del('./test/img/**/*.png', function () {
+  del('./test/img/**/*.png').then(function () {
     stranger(basicConfig, true, function () {
       stranger(basicConfig, false, function (results) {
         t.ok(results, 'It send the results through')
@@ -58,7 +58,7 @@ test('The tool compares similar images', function (t) {
 })
 
 test('The tool finds a diff', function (t) {
-  del('./test/img/**/*.png', function () {
+  del('./test/img/**/*.png').then(function () {
     stranger(basicConfig, true, function () {
       stranger(diffableConfig, false, function (results) {
         t.ok(results, 'It send the results through')
@@ -79,7 +79,7 @@ test('The tool finds a diff', function (t) {
 })
 
 test('The tool finds a diff', function (t) {
-  del('./test/img/**/*.png', function () {
+  del('./test/img/**/*.png').then(function () {
     stranger(basicConfig, true, function () {
       stranger(mismatchConfig, false, function (results) {
         t.ok(results, 'It send the results through')
