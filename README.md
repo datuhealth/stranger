@@ -21,6 +21,14 @@ For better or for worse (we think better), stranger tries to stay as unopinionat
 
 # installation
 
+It's imperative that you have both imagemagick and graphicsmagick installed. If you're running OS X, we recommend using [brew](http://brew.sh) to install them.
+
+```shell
+# If you have brew
+brew install imagemagick
+brew install graphicsmagick
+```
+
 ```shell
 npm install -g stranger
 ```
