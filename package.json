@@ -23,7 +23,7 @@
   "dependencies": {
     "chalk": "^1.1.0",
     "del": "^2.0.2",
-    "gm": "^1.18.1",
+    "gm": "^1.20.0",
     "mkdirp": "^0.5.1",
     "selenium-webdriver": "^2.46.1",
     "subarg": "^1.0.0"
