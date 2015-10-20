@@ -8,9 +8,5 @@ branches:
   only:
   - master
 before_install:
-- sudo apt-get install imagemagick --fix-missing
-addons:
-  sauce_connect: true
-env:
-  global:
-  - secure: JUTbwyeqL8pPz2z4ryxARnRCPa5jribI5EsW5mhed4qBdxrjTgwlUUu3y60b2xolpIB63aGpZQZDw98CLUnoYiugNoGxNcaqCygX0aQ14BdX6G7ySNgrlhJj301oTBthDzW65fFSH6Oh09wavjXCS8CoCxohwjdYxF4Gs45GZTiwG7SL2e9mHcwdDSYSTXB/HeRu6KPAzu/fAocYiJL/plFvFGXbdnB9+/pbLYbQe6Psu6v1gqcfgyJqCfsIkaGcIEtXas6T+IvREYxT9QNAhNEjExDtg7+QRmNsN7Ou/LdXpvzwlcInfXLSpk6dBFaMBJE6vnWk2uzCfPQyPQg/SP3cZGG6sPnjmQ/m/rbyu4578wsCRT9AVPdm59ekvpP4F3czcURP1/FNspH7vqb6Qm8/5vyo4EezGy85VqIcxPvdiTGvzFPZp7UZYeDtGtKwq2ZOAdUfBHqXrfi4H2/J+xuY/h235lowE78rzIFtBWHkNkmyAdy63C3B1BXsIJnQE0vwzouBrkCUIxadZmLy15RdgqcRVURWrXfQf9HmsbBJFybshVjR4qezDFXF0uWCNcAO++CNAPpA6T2eTNqUqagkIc50hT5QCTn+glUAORl6C0Ly5b6B5QsqExrZlFUzV27XOZY7JXf5wnK6CIB8g4NpE03b/w0JFgbqFZJ+42s=
+  - sudo apt-get install imagemagick --fix-missing
+  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
