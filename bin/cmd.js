@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var fs = require('fs')
+var path = require('path')
 var subarg = require('subarg')
 var chalk = require('chalk')
 var args = subarg(process.argv.slice(2))
@@ -24,13 +25,13 @@ function printFilenames (results) {
 // Print help documentation with the -h or --help flags
 if (args.help || args.h) {
   if (args.h === 'config' || args.help === 'config') {
-    fs.createReadStream(__dirname + '/configOptions.txt')
+    fs.createReadStream(path.join(__dirname, '/configOptions.txt'))
       .pipe(process.stdout)
       .on('close', function () {
         process.exit(0)
       })
   } else {
-    fs.createReadStream(__dirname + '/usage.txt')
+    fs.createReadStream(path.join(__dirname, '/usage.txt'))
       .pipe(process.stdout)
       .on('close', function () {
         process.exit(0)
