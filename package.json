@@ -25,7 +25,7 @@
     "del": "^2.0.2",
     "gm": "^1.20.0",
     "mkdirp": "^0.5.1",
-    "selenium-webdriver": "^2.48.2",
+    "selenium-webdriver": "^2.53.1",
     "subarg": "^1.0.0"
   },
   "devDependencies": {
