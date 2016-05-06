@@ -29,7 +29,7 @@
     "subarg": "^1.0.0"
   },
   "devDependencies": {
-    "browserify": "^13.0.0",
+    "browserify": "^13.0.1",
     "buffered-spawn": "^3.0.0",
     "pre-commit": "^1.1.2",
     "standard": "^7.0.1",
